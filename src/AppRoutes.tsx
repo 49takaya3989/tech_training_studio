@@ -5,7 +5,8 @@ import {
   type RouteProps,
 } from "react-router-dom";
 import Home from './Home';
-import About from './About';
+import About from './react-router/About';
+import QueryString from './query-string/Index';
 
 const routes = [
   {
@@ -15,6 +16,10 @@ const routes = [
   {
     path: '/about',
     Component: About
+  },
+  {
+    path: '/query-string',
+    Component: QueryString
   },
 ] as const satisfies RouteProps[];
 
