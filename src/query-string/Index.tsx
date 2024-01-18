@@ -9,6 +9,7 @@ import { Link, useLocation } from 'react-router-dom';
 const UseQueryString = () => {
   const { search } = useLocation();
   const parseQS = queryString.parse(search);
+  console.log(parseQS);
   const parseQSKeys = Object.keys(parseQS);
 
   return (
@@ -22,7 +23,7 @@ const UseQueryString = () => {
         {"parseQSKeys.map(key => <div>{`${key}：${parseQS[key]}"}
       </div>
       <br />
-      {parseQSKeys.map(key => <div>{`${key}：${parseQS[key]}`}</div>)}
+      {parseQSKeys.map(key => <div key={key}>{`${key}：${parseQS[key]}`}</div>)}
     </div>
   )
 };
@@ -47,7 +48,7 @@ const UseURLSearchParams = () => {
         {"urlSearchParamKeys.map(key => <div>{`${key}：${urlSearchParam.get(key)}`}"}
       </div>
       <br />
-      {urlSearchParamKeys.map(key => <div>{`${key}：${urlSearchParam.get(key)}`}</div>)}
+      {urlSearchParamKeys.map(key => <div key={key}>{`${key}：${urlSearchParam.get(key)}`}</div>)}
     </div>
   )
 }
