@@ -9,7 +9,6 @@ import { Link, useLocation } from 'react-router-dom';
 const UseQueryString = () => {
   const { search } = useLocation();
   const parseQS = queryString.parse(search);
-  console.log(parseQS);
   const parseQSKeys = Object.keys(parseQS);
 
   return (
