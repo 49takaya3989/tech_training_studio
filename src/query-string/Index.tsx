@@ -30,7 +30,6 @@ const UseQueryString = () => {
 /**
  * UseURLSearchParams
  * "URLSearchParams"でクエリストリングを使用する
- * https://github.com/sindresorhus/query-string
  */
 const UseURLSearchParams = () => {
   const { search } = useLocation();
